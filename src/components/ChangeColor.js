@@ -22,16 +22,16 @@ const Container = styled.div`
 
 
 const ChangeColor = ({handleBackground})=>{
-    const [color, setColor] = useState('skyblue')
+    const [colorSetted, setColor] = useState('skyblue')
     return(
         <Container>
-            <Card color={color}>
+            <Card color={colorSetted}>
                 <input
                 type={'button'}
                 value={'Randomize Color'}
                 onClick={() => {
                   setColor(randomColor())
-                  handleBackground(color)
+                  handleBackground(colorSetted)
                 }}
                 />
             </Card>
