@@ -21,8 +21,7 @@ const Container = styled.div`
 
 
 
-
-const ChangeColor = ()=>{
+const ChangeColor = ({handleBackground})=>{
     const [color, setColor] = useState('skyblue')
     return(
         <Container>
@@ -30,7 +29,10 @@ const ChangeColor = ()=>{
                 <input
                 type={'button'}
                 value={'Randomize Color'}
-                onClick={() => setColor(randomColor())}
+                onClick={() => {
+                  setColor(randomColor())
+                  handleBackground(color)
+                }}
                 />
             </Card>
         </Container>
